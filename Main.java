@@ -11,19 +11,24 @@ class Main {
 
     historia.Intro();
     
+    
+    /*
     //Receber dados do usuario:
       //Altura:
       System.out.print("Digite sua altura: ");
-      usuario.altura = resposta.nextFloat();
+      usuario.setAltura(resposta.nextFloat()); 
+      
       
       //Peso:
       System.out.print("Digite seu peso: ");
-      usuario.peso = resposta.nextFloat();
+      usuario.setPeso(resposta.nextFloat());
      
+      
       //IMC:
-      usuario.IMC(usuario.peso, usuario.altura);
-      usuario.IMC(usuario.peso,usuario.altura);
-      System.out.println("Seu imc é: " + usuario.imcVal);
+      usuario.IMC(usuario.getPeso, usuario.getAltura);
+      usuario.IMC(usuario.getPeso,usuario.getAltura);
+      System.out.println("Seu imc é: " + usuario.getImcVal);
+      */
   }
 
   public void pausa(int tempo){

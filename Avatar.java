@@ -9,10 +9,10 @@ public class Avatar{
   private float altura = 0;
 
   //Fatores de saúde
+  private float imcVal = 0;
   private int fome = 0;
   private int psico = 0;
   private int sede = 0;
-  private float imcVal = 0;
   private int saude = 0;
 
   //Valores para a saúde final:
@@ -40,22 +40,54 @@ public class Avatar{
   public float getAltura(){
       return this.altura;
   }
+  public float getImcVal(){
+    return this.imcVal;
+  }
+  public int getEscolha(){
+    return this.escolha;
+  }
 
   //Setters:
+
+  //Atribui um valor à variável nome:
   public void setNome(String name){
       this.nome = name;
   }
+
+  //Atribui um valor à variável idade:
   public void setIdade(int age){
       this.idade = age;
   }
+
+  //Atribui um valor à variável peso:
   public void setPeso(float weight){
       this.peso = weight;
   }
+
+  //Atribui um valor à variável peso:
   public void setAltura(float height){
       this.altura = height;
   }
 
-  //Função da saude do Avatar
+  //Atribui um valor à variável peso:
+  public void setEscolha(int choice){
+      if(choice != 1 && choice != 2){
+        System.out.println("Você deve digitar 1 ou 2 para fazer a escolha:");
+        return;
+      }else{
+          this.escolha = choice;
+      }
+  }
+
+  public int testeEscolha(){
+    if(this.escolha == 1){
+      return 1;
+    }else if(this.escolha == 2){
+      return 2;
+    }
+  }
+
+  //Função da saúde do Avatar
   public int Saude(int fome,int psico,int sede){
 
     this.saude = fome + psico + sede/3;
