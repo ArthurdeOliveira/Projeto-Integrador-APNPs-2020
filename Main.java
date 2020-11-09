@@ -10,25 +10,9 @@ class Main {
     Avatar usuario = new Avatar();
 
     historia.Intro();
+    historia.escolha1();
+    historia.escolha2();
     
-    
-    /*
-    //Receber dados do usuario:
-      //Altura:
-      System.out.print("Digite sua altura: ");
-      usuario.setAltura(resposta.nextFloat()); 
-      
-      
-      //Peso:
-      System.out.print("Digite seu peso: ");
-      usuario.setPeso(resposta.nextFloat());
-     
-      
-      //IMC:
-      usuario.IMC(usuario.getPeso, usuario.getAltura);
-      usuario.IMC(usuario.getPeso,usuario.getAltura);
-      System.out.println("Seu imc é: " + usuario.getImcVal);
-      */
   }
 
   public void pausa(int tempo){

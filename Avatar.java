@@ -1,7 +1,10 @@
+import java.util.Scanner;
 public class Avatar{
-
   //Atributos e variáveis:
   
+  //Componentes:
+  Scanner resposta = new Scanner(System.in);
+
   //Dados:
   private String nome;
   private int idade = 0;
@@ -10,10 +13,10 @@ public class Avatar{
 
   //Fatores de saúde
   private float imcVal = 0;
-  private int fome = 0;
-  private int psico = 0;
-  private int sede = 0;
-  private int saude = 0;
+  private int fome = 50;
+  private int psico = 50;
+  private int sede = 50;
+  private int saude = 50;
 
   //Valores para a saúde final:
   private final double ruim = 34.9;
@@ -24,27 +27,57 @@ public class Avatar{
   //Variáveis das escolhas:
   private int escolha = 0;
 
-
   //Funções:
 
   //Getters:
+  //Retorna o valor da variavél privada nome:
   public String getNome(){
       return this.nome;
   }
+
+  //Retorna o valor da variavél privada idade:
   public int getIdade(){
       return this.idade;
   }
+
+  //Retorna o valor da variavél peso:
   public float getPeso(){
       return this.peso;
   }
+
+  //Retorna o valor da variavél altura:
   public float getAltura(){
       return this.altura;
   }
+
+  //Retorna o valor da variavél ImcVal:
   public float getImcVal(){
     return this.imcVal;
   }
+
+  //Retorna o valor da variavél escolha:
   public int getEscolha(){
     return this.escolha;
+  }
+
+  //Retorna o valor da variavél fome:
+  public int getFome(){
+    return this.fome;
+  }
+
+  //Retorna o valor da variavél sede:
+  public int getSede(){
+    return this.sede;
+  }
+
+  //Retorna o valor da variavél ImcVal:
+  public int getSaude(){
+    return this.saude;
+  }
+
+  //Retorna o valor da variavél privada psico:
+  public int getPsico(){
+    return this.psico;
   }
 
   //Setters:
@@ -64,27 +97,54 @@ public class Avatar{
       this.peso = weight;
   }
 
-  //Atribui um valor à variável peso:
+  //Atribui um valor à variável altura:
   public void setAltura(float height){
       this.altura = height;
   }
 
-  //Atribui um valor à variável peso:
-  public void setEscolha(int choice){
-      if(choice != 1 && choice != 2){
-        System.out.println("Você deve digitar 1 ou 2 para fazer a escolha:");
-        return;
-      }else{
-          this.escolha = choice;
-      }
+  //Atribui um valor à variável altura:
+  public void setSede(int thirst){
+    this.sede = thirst;
   }
 
-  public int testeEscolha(){
-    if(this.escolha == 1){
-      return 1;
-    }else if(this.escolha == 2){
-      return 2;
+  //Atribui um valor à variável altura:
+  public void setFome(int hunger){
+    this.fome = hunger;
+  }
+
+  //Atribui um valor à variável altura:
+  public void setPsico(int psicologic){
+    this.psico = psicologic;
+  }
+
+  //Atribui um valor à variável altura:
+  public void setSaude(int health){
+    this.saude = health;
+  }
+
+  //Atribui um valor à variável altura:
+  public void setImcVal(int bmiValue){
+    this.imcVal = bmiValue;
+  }
+
+  //Atribui um valor à variável escolha:
+  public void setEscolha(int choice){
+    while(choice != 1 && choice != 2 && choice != 3){
+      System.out.println("Você deve digitar 1, 2 ou 3 para fazer a escolha:");
+      choice = resposta.nextInt();
     }
+    this.escolha = choice;
+  }
+
+  //Caso o usuário escolha digite um número inválido:
+  public void escolhaErrada(){
+    int choice;
+    do{
+       System.out.println("Este número é inválido, para esta questão você deve digitar 1 ou 2 para fazer a escolha:");
+      choice = resposta.nextInt();
+    }
+    while(choice != 1 && choice != 2);
+      this.escolha = choice;
   }
 
   //Função da saúde do Avatar
