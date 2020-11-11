@@ -97,16 +97,8 @@ class Text {
 
   // História:
 
-  public void rota101() {
-
-    main.pausa(1500);
-
-    printLine();
-
-    print("Você se levanta da sua cama, põe suas pantufas e se dirige até a frente do espelho, e nele você vê:");
-
-    main.pausa(1500);
-
+  public void espelho(){
+    
     print("\tQual o seu nome?");
     usuario.setNome(resposta.next());
     print("\tQual a sua idade?");
@@ -120,6 +112,19 @@ class Text {
     main.pausa(1500);
 
     printLine();
+  }
+
+  public void rota101() {
+
+    main.pausa(1500);
+
+    printLine();
+
+    print("Você se levanta da sua cama, põe suas pantufas e se dirige até a frente do espelho, e nele você vê:");
+
+    main.pausa(1500);
+
+    espelho();
 
     print(
         "Você sai da frente do espelho e se dirige ao banheiro, você toma um bom banho e fica pronto para começar o seu dia.");
@@ -231,15 +236,7 @@ class Text {
 
     main.pausa(4000);
 
-    print("\tQual o seu nome?");
-    usuario.setNome(resposta.nextLine());
-    print("\tQual a sua idade?");
-    usuario.setIdade(resposta.nextInt());
-    print("\tQual a sua altura?");
-    usuario.setAltura(resposta.nextFloat());
-    print("\tQual o seu peso?");
-    usuario.setPeso(resposta.nextFloat());
-    // calcula imc saude anor(-20) abai(-10) ideal(0) sobr(-10) obs(-20) obsg(-30)
+    espelho();
 
     main.pausa(1000);
 

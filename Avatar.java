@@ -15,7 +15,7 @@ public class Avatar{
   private float imcVal = 0;
   private int fome = 50;
   private int psico = 50;
-  private int sede = 50;
+  private int fisico = 50;
   private int saude = 50;
 
   //Valores para a saúde final:
@@ -66,8 +66,8 @@ public class Avatar{
   }
 
   //Retorna o valor da variavél sede:
-  public int getSede(){
-    return this.sede;
+  public int getFisico(){
+    return this.fisico;
   }
 
   //Retorna o valor da variavél ImcVal:
@@ -103,8 +103,8 @@ public class Avatar{
   }
 
   //Atribui um valor à variável altura:
-  public void setSede(int thirst){
-    this.sede = thirst;
+  public void setFisico(int thirst){
+    this.fisico = thirst;
   }
 
   //Atribui um valor à variável altura:
@@ -148,11 +148,10 @@ public class Avatar{
   }
 
   //Função da saúde do Avatar
-  public int Saude(int fome,int psico,int sede){
+  public int Saude(int fome,int psico,int fisico){
 
-    this.saude = fome + psico + sede/3;
+    this.saude = (fome + psico + fisico) / 3;
     return saude;
-    
   }
   //Função do Indice de Massa Corporal
   public void IMC(float peso, float altura){
