@@ -5,7 +5,7 @@ class Text {
 
   Main main = new Main();
   Avatar usuario = new Avatar();
-
+  Rota1 rota = new Rota1();
   Scanner resposta = new Scanner(System.in);
   // Funções:
 
@@ -82,7 +82,7 @@ class Text {
     print("\t\t\t[TUTORIAL]:");
     main.pausa(1500);
 
-    print("Para fazer uma escolha digite o número mostrado antes frase que \nrepresenta a ação que você quer executar");
+    print("Para fazer uma escolha digite o número mostrado antes da frase que \nrepresenta a ação que você quer tomar");
     printLine();
     usuario.setEscolha(resposta.nextInt());
 
@@ -266,6 +266,8 @@ class Text {
 
     print("Você, após estar pronto, entra no seu quarto e olha para a sua mochila e decide:");
 
+    printEmptyLine();
+
     print(
         "\t[ 1 ] Pegar seus materias e sua mochila e seguir para a parada de ônibus, preciso estudar para ter um bom futuro.");
     print("\t[ 2 ] Ficar em casa jogando algum jogo para me divertir.");
@@ -274,7 +276,7 @@ class Text {
 
     if (usuario.getEscolha() == 1) {
       // classe rota 1
-    
+      rota.escola();
     } else if (usuario.getEscolha() == 2) {
       // classe rota 2
     } else if (usuario.getEscolha() == 3) {

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class Rota1{
-  Text historia = new Text();
+
   Main main = new Main();
   Avatar usuario = new Avatar();
   Scanner resposta = new Scanner(System.in);
@@ -42,6 +42,7 @@ public void escola(){
 
   main.pausa(3000);
   
+  escolha3();
 }
 
   public void escolha3(){
