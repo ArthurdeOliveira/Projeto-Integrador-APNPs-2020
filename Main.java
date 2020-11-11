@@ -8,6 +8,7 @@ class Main {
 
     Text historia = new Text();
     Avatar usuario = new Avatar();
+    Rota1 rota1 = new Rota1();
 
     historia.Intro();
     historia.escolha1();

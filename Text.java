@@ -5,6 +5,7 @@ class Text {
 
   Main main = new Main();
   Avatar usuario = new Avatar();
+
   Scanner resposta = new Scanner(System.in);
   // Funções:
 
@@ -86,11 +87,8 @@ class Text {
     usuario.setEscolha(resposta.nextInt());
 
     if (usuario.getEscolha() == 1) {
-
       rota101();
-
     } else if (usuario.getEscolha() == 2) {
-
       rota102();
     } else if (usuario.getEscolha() == 3) {
       usuario.escolhaErrada();
@@ -146,7 +144,7 @@ class Text {
 
     main.pausa(1500);
 
-    print("[ 1 ] Você se serve com uma comida mais leve, porém nutritiva acompanhada por um copo de suco natural. ");
+    print("[ 1 ] Você se serve com uma comida mais leve, porém nutritiva acompanhada por um copo de café sem açucar. ");
 
     print(
         "[ 2 ] Você enche seu prato com salgados e um grande bolo de chocolate com cobertura e um copo de refrigerante. ");
@@ -159,17 +157,57 @@ class Text {
       main.pausa(1500);
       // fome aumenta
       print("Você toma seu café da manhã e se sente cheio de energia");
+      print("Para um café da manhã balanceado e saudavel essa é a refeição mais apropriada para esse horario:");
     } else if (usuario.getEscolha() == 2) {
       main.pausa(1500);
       // fome continua igual
       print("Você come seus salgados e seu bolo, e já esta se sente disposto.");
+      print("Injerir muito doce e gorduras de manhã sedo não é apropriado para o horario, algo mais apropriado seria:");
     } else if (usuario.getEscolha() == 3) {
       main.pausa(1500);
       print("Você se levanta sai da mesa sem fome e se dirige ao seu quarto.");
       // fome diminui
 
     }
-    printLine();
+    if (usuario.getEscolha() == 1 || usuario.getEscolha() == 2) {
+
+      printLine();
+
+      print("Torradas, ovos e frutas");
+
+      main.pausa(1500);
+
+      printEmptyLine();
+
+      print("Para uma refeição ser saudável, ela precisa ser balanceada. Isso significa contar com quantidades adequadas de carboidratos, proteínas e gorduras.");
+
+      main.pausa(4000);
+
+      printEmptyLine();
+
+      print("Esse exemplo é uma ideia deliciosa e fácil de café da manhã saudável, que conta com todos os grupos alimentares de maneira equilibrada.");
+
+      main.pausa(4000);
+
+      printEmptyLine();
+
+      print("Ingredientes:");
+
+      main.pausa(1500);
+
+      printEmptyLine();
+
+      print("café sem açúcar com leite(traz as gorduras boas);");
+      print("ovo e  queijo(são as proteínas);");
+      print("pão integral e frutas(os carboidratos);");
+      print("adicione aveia, linhaça ou outras fibras à fruta(opcional).");
+
+      main.pausa(4000);
+      
+      
+            
+    }
+    
   }
 
   public void rota102() {
@@ -236,6 +274,7 @@ class Text {
 
     if (usuario.getEscolha() == 1) {
       // classe rota 1
+    
     } else if (usuario.getEscolha() == 2) {
       // classe rota 2
     } else if (usuario.getEscolha() == 3) {
@@ -243,4 +282,4 @@ class Text {
     }
 
   }
-}
+} 
