@@ -13,6 +13,7 @@ class Main {
     historia.Intro();
     historia.escolha1();
     historia.escolha2();
+    //rota1.escola();
     
   }
 

@@ -6,6 +6,7 @@ class Text {
   Main main = new Main();
   Avatar usuario = new Avatar();
   Rota1 rota = new Rota1();
+  Rota2 rota2 = new Rota2();
   Scanner resposta = new Scanner(System.in);
   // Funções:
 
@@ -276,6 +277,7 @@ class Text {
       rota.escola();
     } else if (usuario.getEscolha() == 2) {
       // classe rota 2
+      rota2.emCasa();
     } else if (usuario.getEscolha() == 3) {
       // classe rota 3
     }
