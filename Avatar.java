@@ -141,11 +141,38 @@ public class Avatar{
     int choice;
     do{
        System.out.println("Este número é inválido, para esta questão você deve digitar 1 ou 2 para fazer a escolha:");
-      choice = resposta.nextInt();
+       choice = resposta.nextInt();
     }
     while(choice != 1 && choice != 2);
-      this.escolha = choice;
+     this.escolha = choice;
   }
+
+  //Funções de soma e subtração:
+
+  //fome:
+  public void somaFome(){
+    this.setFome(this.getFome() + 10);
+  }
+  public void subFome(){
+    this.setFome(this.getFome() - 10);
+  }
+
+  //psicologico:
+  public void somaPsico(){
+    this.setPsico(this.getPsico() + 10);
+  }
+  public void subPsico(){
+    this.setPsico(this.getPsico() - 10);
+  }
+
+  //físco:
+   public void somaFisico(){
+    this.setFisico(this.getFisico() + 10);
+  }
+  public void subFisico(){
+    this.setFisico(this.getFisico() - 10);
+  }
+
 
   //Função da saúde do Avatar
   public int Saude(int fome,int psico,int fisico){

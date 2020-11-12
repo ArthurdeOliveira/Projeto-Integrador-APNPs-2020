@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 class Main {
-  static int x = 0;
-  int tempo;
+  
   public static void main(String[] args) {
     Scanner resposta = new Scanner(System.in);
 

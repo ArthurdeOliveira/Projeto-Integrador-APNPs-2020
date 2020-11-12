@@ -25,7 +25,9 @@ class Rota2{
 
       print("Você decide ficar em casa e descansar um pouco, enquanto pensa no que fazer durante o dia");
 
+      printLine();
       print("- 08:30 da manhã -");
+      printLine();
 
       print("Em meio ao tédio você pensa em ideias para fazer");
       
@@ -35,19 +37,25 @@ class Rota2{
 
     public void escolha72(){
 
-      print("[ 1 ] Ligar seu videogame e jogar Grande Traficante de Aviões V (GTAV.");
+      print("\t[ 1 ] Ligar seu videogame e jogar Grande Traficante de Aviões V (GTAV.");
 
-      print("[ 2 ] Praticar exercícios físicos e Yoga.");
+      print("\t[ 2 ] Praticar exercícios físicos e Yoga.");
 
       usuario.setEscolha(resposta.nextInt());
 
       if (usuario.getEscolha() == 1) {
+
+        usuario.subFisico();
+        usuario.somaPsico();
   
         print("Você passa um tempo jogando seu jogo para desestressar");
 
         escolha82();
 
       } else if (usuario.getEscolha() == 2) {
+
+        usuario.somaPsico();
+        usuario.somaFisico();
    
         print("Você pratica algumas atividades e yoga e se sente bem mais leve e calmo.");
 
@@ -63,22 +71,26 @@ class Rota2{
 
     public void escolha82(){
 
+      printLine();
       print("- 12:00 Meio Dia -");
+      printLine();
 
       print("A hora do almoço chega, e você vai até a cozinha, você pode cozinhar um almoço saudável, pedir um hambúrguer com batata fritas no EiFood ou não comer nada.");
 
       print("Você irá:");
 
-      print("[1] Comer um almoço saudável com frango, salada e uma maçã.");
+      print("\t[ 1 ] Comer um almoço saudável com frango, salada e uma maçã.");
 
-      print("[2] Pedir Um hambúrguer com batata frita.");
+      print("\t[ 2 ] Pedir Um hambúrguer com batata frita.");
 
-      print("[3] Você não se sente com fome e decidi pular o almoço.");
+      print("\t[ 3 ] Você não se sente com fome e decidi pular o almoço.");
 
       usuario.setEscolha(resposta.nextInt());
 
       //[ 1 ]
       if (usuario.getEscolha() == 1) {
+
+        usuario.somaFome();
 
         print("Você faz um prato com saladas e frango.");
 
@@ -93,6 +105,8 @@ class Rota2{
   
         //[ 3 ]
       } else if (usuario.getEscolha() == 3) {
+
+        usuario.subFome();
   
         print("Você pula o almoço e volta para o seu quarto.");
   
@@ -100,6 +114,7 @@ class Rota2{
 
       if (usuario.getEscolha() == 1 || usuario.getEscolha() == 2) {
 
+        printLine();
         print("O almoço é um refeição importantíssima, já que é ele que nos dá energia para funcionar à tarde e no início da noite.");
 
         print("Um bom exemplo de um almoço saudável e simples é:");
@@ -116,7 +131,9 @@ class Rota2{
 
         }
 
+        printLine();
         print("- 02:00 da tarde -");
+        printLine();
 
         print (" Você chama alguns amigos para sair e vão todos para um shopping local. ");
         
@@ -126,26 +143,31 @@ class Rota2{
 
       public void escolha92(){
 
+        printLine();
         print("- 02:30 da tarde -");
+        printLine();
 
         print (" Você chega no shopping junto a seus amigos, e vocês decidem assistir o filme: Vendedores: Guerra Finita ");
 
-        
+        printLine();
         print("- 04:00 da tarde -");
+        printLine();
 
         print (" Após o filme acabar, sua barriga ronca de fome, você vai até uma lanchonete pedir algo, as opções que mais lhe chamaram atenção foram: Sanduíche de atum e abacate, um pote G de pipoca com refri ou não comprar nada. ");
 
         print("Você irá:");
 
-        print("[1] Comer um sanduíche de atum e abacate.");
+        print("\t[ 1 ] Comer um sanduíche de atum e abacate.");
 
-        print("[2] Ficar sem comer para não gasta dinheiro.");
+        print("\t[ 2 ] Ficar sem comer para não gasta dinheiro.");
 
-        print("[3] Pote G de pipoca com refri. ");
+        print("\t[ 3 ] Pote G de pipoca com refri. ");
 
         usuario.setEscolha(resposta.nextInt());
 
        if (usuario.getEscolha() == 1) {
+
+          usuario.somaFome();
   
           print("Você pega o sanduíche para a refeição da tarde e se senta em uma mesa na lanchonete.");
 
@@ -153,6 +175,8 @@ class Rota2{
   
           //escolha8();
         } else if (usuario.getEscolha() == 2) {
+
+          usuario.subFome();
        
           print("Você escolhe não gastar dinheiro e não come nada pela tarde.");
  
@@ -166,7 +190,8 @@ class Rota2{
         }
 
         if (usuario.getEscolha() == 1 || usuario.getEscolha() == 3) {
-
+        
+        printLine();
         print("Entre o almoço e o jantar, sempre bate aquela fominha, e o café da tarde sempre serve para dar aquela sustento até a noite.");
    
           print("E para ele, uma boa opção seria: ");
@@ -191,8 +216,10 @@ class Rota2{
 
         }
       
+        printLine();
         print("- 04:30 da tarde -");
-        
+        printLine();
+
         print ("Você sai do shopping e vai a caminho de sua casa, até chegar lá leva mais de meia hora.");
     
       escolha101();
@@ -201,25 +228,31 @@ class Rota2{
 
   public void escolha101(){
 
+    printLine();
     print("- 06:00 da tarde -");
-    
+    printLine();
+
       print("Você escuta da porta, seus pais, que já haviam chegado do trabalho, o convidando para montar um quebra cabeça para um momento em família.");
 
       print("Você irá:");
 
-      print("[ 1 ] Aceitar o convite de seus pais e participar do quebra cabeça.");
+      print("\t[ 1 ] Aceitar o convite de seus pais e participar do quebra cabeça.");
 
-      print("[ 2 ] Recusar e ir para o seu quarto dormir.");
+      print("\t[ 2 ] Recusar e ir para o seu quarto dormir.");
 
       usuario.setEscolha(resposta.nextInt());
 
        if (usuario.getEscolha() == 1) {
+
+          usuario.somaPsico();
  
           print("Você se junta a eles nessa missão de montar um quebra cabeça.");
         
           escolha111();
 
         } else if (usuario.getEscolha() == 2) {
+
+          usuario.
  
           print("Você não está com vontade e decidi ir para seu quarto dormir.");
         
@@ -233,17 +266,19 @@ class Rota2{
 
   public void escolha111(){
 
+    printLine();
     print("- 08:00 da noite -");
+    printLine();
 
       print("Algum tempo depois, seus pais o chamam avisando que o jantar está pronto");
 
       print("Você irá:");
 
-      print("[ 1 ] Comer o jantar que eles prepararam.");
+      print("\t[ 1 ] Comer o jantar que eles prepararam.");
 
-      print("[ 2 ] Comer um pastel que estava guardado na geladeira.");
+      print("\t[ 2 ] Comer um pastel que estava guardado na geladeira.");
 
-      print("[ 3 ] Voltar para o quarto e não comer nada.");
+      print("\t[ 3 ] Voltar para o quarto e não comer nada.");
 
         usuario.setEscolha(resposta.nextInt());
 
@@ -253,14 +288,16 @@ class Rota2{
         
           print("A refeição preparada por seus pais era saudável e leve, como um jantar deve ser.");
         
+          printLine();
           print("Quinoa com frango e legumes: A quinoa é rica em fibras, cálcio e ferro e também não contém glúten. Para quem gosta de pratos mais leves e saborosos, essa versão de quinoa com frango e legumes é a pedida perfeita. Uma dica bem legal: se você preferir, pode colocar na geladeira e servir como uma salada fresca!");
          
         } else if (usuario.getEscolha() == 2) {
-  
+          
           print("Você esquenta o pastel que estava guardado no fundo da geladeira, ele não estava com um cheiro muito bom, mas você comeu mesmo assim.");
      
           print("A refeição que seus pais prepararam, uma quinoa com frango e legumes, era uma opção melhor para o jantar por se tratar de uma comida mais leve para de noite.");
-    
+
+          printLine();
           print("Quinoa com frango e legumes: A quinoa é rica em fibras, cálcio e ferro e também não contém glúten. Para quem gosta de pratos mais leves e saborosos, essa versão de quinoa com frango e legumes é a pedida perfeita. Uma dica bem legal: se você preferir, pode colocar na geladeira e servir como uma salada fresca!");
   
         } else if (usuario.getEscolha() == 3) {
@@ -273,17 +310,19 @@ class Rota2{
 
   public void escolha121(){
 
+    printLine();
     print("- 10:00 da noite -");
-   
+    printLine();   
+
         print("O brilho da lua bate em sua janela avisando que já é tarde da noite.");
     
         print("Você boceja de sono e se prepara para dormir.");
   
         print("Você irá:");
 
-        print("[ 1 ] Dormir, pois precisa de descanso para ter um sono saudável e ser produtivo no dia seguinte.");
+        print("\t[ 1 ] Dormir, pois precisa de descanso para ter um sono saudável e ser produtivo no dia seguinte.");
 
-        print("[ 2 ] Madrugar jogando, afinal, o que importa é a diversão.");
+        print("\t[ 2 ] Madrugar jogando, afinal, o que importa é a diversão.");
 
         usuario.setEscolha(resposta.nextInt());
     
