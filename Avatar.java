@@ -16,13 +16,13 @@ public class Avatar{
   private int fome = 50;
   private int psico = 50;
   private int fisico = 50;
-  private int saude = 50;
+  private int saude;
 
   //Valores para a saúde final:
   private final double ruim = 34.9;
   private final double mediano1 = 35.0;
   private final double mediano2 = 59.0;
-  private final double bom = 60; 
+  private final double bom = 70; 
 
   //Variáveis das escolhas:
   private int escolha = 0;
@@ -159,18 +159,18 @@ public class Avatar{
 
   //psicologico:
   public void somaPsico(){
-    this.setPsico(this.getPsico() + 10);
+    this.setPsico(this.getPsico() + 15);
   }
   public void subPsico(){
-    this.setPsico(this.getPsico() - 10);
+    this.setPsico(this.getPsico() - 15);
   }
 
   //físco:
    public void somaFisico(){
-    this.setFisico(this.getFisico() + 10);
+    this.setFisico(this.getFisico() + 20);
   }
   public void subFisico(){
-    this.setFisico(this.getFisico() - 10);
+    this.setFisico(this.getFisico() - 20);
   }
 
 
@@ -178,6 +178,7 @@ public class Avatar{
   public int Saude(int fome,int psico,int fisico){
 
     this.saude = (fome + psico + fisico) / 3;
+    this.saude = this.saude -= imcVal;
     return saude;
   }
   //Função do Indice de Massa Corporal

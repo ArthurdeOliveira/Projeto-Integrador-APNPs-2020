@@ -110,9 +110,10 @@ class Text {
     usuario.setEscolha(resposta.nextInt());
 
     if (usuario.getEscolha() == 1) {
+      usuario.somaPsico();
       rota101();
     } else if (usuario.getEscolha() == 2) {
-      usuario.setPsico(usuario.getPsico() - 10);
+      usuario.subPsico();
       rota102();
     } else if (usuario.getEscolha() == 3) {
       usuario.escolhaErrada();
@@ -133,6 +134,7 @@ class Text {
     printQ("\tQual o seu peso?: ");
     usuario.setPeso(resposta.nextFloat());
     // calcula imc saude anor(-20) abai(-10) ideal(0) sob(-10) obs(-20) obsg(-30)
+    usuario.IMC(usuario.getPeso(), usuario.getAltura());
   }
 
   public void rota101() {

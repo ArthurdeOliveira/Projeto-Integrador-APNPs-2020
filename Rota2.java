@@ -5,6 +5,7 @@ class Rota2{
   Avatar usuario = new Avatar();
   Scanner resposta = new Scanner(System.in);
   Rota1 rota1 = new Rota1();
+  Finais fim = new Finais();
   
   // Funções de atalho:
   //Um atalho para a função System.out.println();
@@ -252,7 +253,7 @@ class Rota2{
 
         } else if (usuario.getEscolha() == 2) {
 
-          usuario.
+          usuario.subFome();
  
           print("Você não está com vontade e decidi ir para seu quarto dormir.");
         
@@ -283,6 +284,8 @@ class Rota2{
         usuario.setEscolha(resposta.nextInt());
 
       if (usuario.getEscolha() == 1) {
+
+          usuario.somaFome();
         
           print("Seus pais prepararam um quinoa com frango e legumes, você se sente satisfeito.");
         
@@ -292,6 +295,8 @@ class Rota2{
           print("Quinoa com frango e legumes: A quinoa é rica em fibras, cálcio e ferro e também não contém glúten. Para quem gosta de pratos mais leves e saborosos, essa versão de quinoa com frango e legumes é a pedida perfeita. Uma dica bem legal: se você preferir, pode colocar na geladeira e servir como uma salada fresca!");
          
         } else if (usuario.getEscolha() == 2) {
+
+          usuario.subFome();
           
           print("Você esquenta o pastel que estava guardado no fundo da geladeira, ele não estava com um cheiro muito bom, mas você comeu mesmo assim.");
      
@@ -301,6 +306,9 @@ class Rota2{
           print("Quinoa com frango e legumes: A quinoa é rica em fibras, cálcio e ferro e também não contém glúten. Para quem gosta de pratos mais leves e saborosos, essa versão de quinoa com frango e legumes é a pedida perfeita. Uma dica bem legal: se você preferir, pode colocar na geladeira e servir como uma salada fresca!");
   
         } else if (usuario.getEscolha() == 3) {
+
+          usuario.subFome();
+
           print("Você não estava com fome e se dirige de volta para o seu quarto e fica lá por um tempo.");
         }
 
@@ -310,21 +318,46 @@ class Rota2{
 
   public void escolha121(){
 
-    printLine();
-    print("- 10:00 da noite -");
-    printLine();   
-
+   
+        printLine();
+        print("- 10:00 da noite -");
+        printLine();
+   
         print("O brilho da lua bate em sua janela avisando que já é tarde da noite.");
     
         print("Você boceja de sono e se prepara para dormir.");
+
+        printEmptyLine();
   
         print("Você irá:");
+
+        printEmptyLine();
 
         print("\t[ 1 ] Dormir, pois precisa de descanso para ter um sono saudável e ser produtivo no dia seguinte.");
 
         print("\t[ 2 ] Madrugar jogando, afinal, o que importa é a diversão.");
 
         usuario.setEscolha(resposta.nextInt());
-    
-  }
+
+          if (usuario.getEscolha() == 1) {
+
+         usuario.somaPsico();
+
+         printEmptyLine();
+ 
+          print("Você se prepara para dormir, se dirige até sua cama e com o barulho da leve brisa e dos grilos lá fora você adormece.");
+        
+        } else if (usuario.getEscolha() == 2) {
+
+          usuario.subPsico();
+
+          printEmptyLine();
+ 
+          print("Você já dormiu demais e se dirige para frente do computador, ligando-o e passando a noite toda jogando.");
+        
+        } else if (usuario.getEscolha() == 3) {
+          usuario.escolhaErrada();
+        }
+    }
+
 }
