@@ -3,16 +3,16 @@ import java.util.Scanner;
 class Main {
   
   public static void main(String[] args) {
-    Scanner resposta = new Scanner(System.in);
+    
+  Rota1 rota = new Rota1();
 
     Text historia = new Text();
-    Avatar usuario = new Avatar();
-    Rota1 rota1 = new Rota1();
 
-    historia.Intro();
-    historia.escolha1();
-    historia.escolha2();
+    //historia.Intro();
+    //historia.escolha1();
+    //historia.escolha2();
     //rota1.escola();
+    rota.escolha11();
     
   }
 

@@ -2,8 +2,9 @@ import java.util.Scanner;
 public class Avatar{
   //Atributos e variáveis:
   
-  //Componentes:
   Scanner resposta = new Scanner(System.in);
+  //Componentes:
+ 
 
   //Dados:
   private String nome;
@@ -16,13 +17,13 @@ public class Avatar{
   private int fome = 50;
   private int psico = 50;
   private int fisico = 50;
-  private int saude;
+  private int saude = 0;
 
   //Valores para a saúde final:
-  private final double ruim = 34.9;
-  private final double mediano1 = 35.0;
-  private final double mediano2 = 59.0;
-  private final double bom = 70; 
+  public final double ruim = 34.9;
+  public final double mediano1 = 35.0;
+  public final double mediano2 = 59.0;
+  public final double bom = 70; 
 
   //Variáveis das escolhas:
   private int escolha = 0;
@@ -177,8 +178,8 @@ public class Avatar{
   //Função da saúde do Avatar
   public int Saude(int fome,int psico,int fisico){
 
-    this.saude = (fome + psico + fisico) / 3;
-    this.saude = this.saude -= imcVal;
+    this.saude = (this.saude + ((fome + psico + fisico) / 3));
+    //this.saude = this.saude -= imcVal;
     return saude;
   }
   //Função do Indice de Massa Corporal

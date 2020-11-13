@@ -5,7 +5,6 @@ class Rota2{
   Avatar usuario = new Avatar();
   Scanner resposta = new Scanner(System.in);
   Rota1 rota1 = new Rota1();
-  Finais fim = new Finais();
   
   // Funções de atalho:
   //Um atalho para a função System.out.println();

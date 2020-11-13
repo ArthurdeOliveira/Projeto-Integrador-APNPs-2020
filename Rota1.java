@@ -4,6 +4,7 @@ class Rota1{
   Main main = new Main();
   Avatar usuario = new Avatar();
   Scanner resposta = new Scanner(System.in);
+  Finais fim = new Finais();
 
   // Funções de atalho:
   //Um atalho para a função System.out.println();
@@ -110,7 +111,6 @@ public void escolha4(){
           print("Você pede um prato com batata frita e um grande hambúrguer.");
           main.pausa(1000);
           print("Comida muito pesada e gordurosa a tarde pode prejudicar você pelo resto do dia.");
-          escolha5();
 
         } else if (usuario.getEscolha() == 3) {
 
@@ -118,7 +118,7 @@ public void escolha4(){
           print("Você pede um prato com saladas e frango, espera em sua mesa até que tragam a comida.");
           main.pausa(1000);
           print("Um almoço mais balanceado é uma ótima escolha e também a mais adequada.");
-          escolha5();
+        
 
         }
 
@@ -145,7 +145,7 @@ public void escolha4(){
           print("Uma maçã;");
 
         }
-
+          escolha5();
     }
 
     public void escolha5(){
@@ -729,11 +729,10 @@ public void escolha4(){
         
         usuario.Saude(usuario.getFome(),usuario.getPsico(),usuario.getFisico());
 
-        System.out.println("Fome:"+usuario.getFome());
-        System.out.println("Físico:"+usuario.getFisico());
-        System.out.println("Psico"+usuario.getPsico());
-        System.out.println("Saúde:"+usuario.getSaude());
+       
+        fim.calculos();
 
     }
 
+ 
 }

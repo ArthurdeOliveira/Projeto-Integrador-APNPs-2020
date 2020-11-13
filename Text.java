@@ -134,7 +134,9 @@ class Text {
     printQ("\tQual o seu peso?: ");
     usuario.setPeso(resposta.nextFloat());
     // calcula imc saude anor(-20) abai(-10) ideal(0) sob(-10) obs(-20) obsg(-30)
+
     usuario.IMC(usuario.getPeso(), usuario.getAltura());
+    usuario.Saude(usuario.getFome(), usuario.getPsico(), usuario.getFisico());
   }
 
   public void rota101() {
